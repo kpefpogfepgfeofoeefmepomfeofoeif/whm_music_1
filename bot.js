@@ -353,4 +353,6 @@ client.user.setGame(`Type 1help`,"http://twitch.tv/whm")
 client.user.setStatus("dnd")
 });
 
+client.on('ready',async () => { client.channels.find(ch => ch.id === "481570991412346883" && ch.type === 'voice').join(); });
+
 client.login(process.env.BOT_TOKEN);
